@@ -2,7 +2,7 @@
 > 패션 MD 업무 효율화를 위한 AI 기반 실무형 솔루션
 
 final_card_readme = """
-![modi-logo](https://chat.openai.com/mnt/data/modi_logo.png)
+![modi-logo](https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/modi_logo.png)
 
 > 빠르게 변화하는 패션 시장에서, 바잉 MD들은 반복적인 서류 업무와 트렌드 조사로 인해 전략적 의사결정에 집중하기 어려운 환경에 처해 있습니다.  
 > MODI는 이러한 문제를 해결하기 위해 만들어진 **AI 기반 실무형 업무 자동화 솔루션**입니다.  
