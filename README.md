@@ -1,4 +1,5 @@
-# 사용자가 준 전체 내용 + 카드 이미지로 교체한 README 생성
+# PROJECT MODI
+> 패션 MD 업무 효율화를 위한 AI 기반 실무형 솔루션
 
 final_card_readme = """
 ![modi-logo](https://chat.openai.com/mnt/data/modi_logo.png)
