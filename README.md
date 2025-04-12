@@ -16,7 +16,7 @@
 
 | <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/jh.png" width="130"/> | <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/yj.png" width="130"/> | <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/jy.png" width="130"/> | <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/nr.png" width="130"/> |
 |:--:|:--:|:--:|:--:|
-| **박정훈**<br>PL · DBA · FE<br>🧠 시스템 통합 / DB / 프론트 일부<br>[![GitHub](https://img.shields.io/badge/GitHub-junghoon-181717?logo=github)](https://github.com/junghoon) | **지연주**<br>PM · DA · TR<br>📋 기획 / 데이터 분석 및 수집 / 트렌드 리서치<br>[![GitHub](https://img.shields.io/badge/GitHub-yeonju-181717?logo=github)](https://github.com/yeonju) | **박지윤**<br>PM · DA · TR<br>📊 기획 / 데이터 분석 및 수집 / 트렌드 리서치<br>[![GitHub](https://img.shields.io/badge/GitHub-jiyoon-181717?logo=github)](https://github.com/jiyoon) | **서누리**<br>BE · FE · UX · OCR<br>💻 백엔드 / 프론트 / UX / OCR<br>[![GitHub](https://img.shields.io/badge/GitHub-nuri-181717?logo=github)](https://github.com/nuri) |
+| **박정훈**<br>PL · DBA · FE<br>🧠 시스템 통합 / DB / 프론트 일부<br>[![GitHub](https://img.shields.io/badge/GitHub-junghoon-181717?logo=github)](https://github.com/ezypzylemon) | **지연주**<br>PM · DA · TR<br>📋 기획 / 데이터 분석 및 수집 / 트렌드 리서치<br>[![GitHub](https://img.shields.io/badge/GitHub-yeonju-181717?logo=github)](https://github.com/y47love) | **박지윤**<br>PM · DA · TR<br>📊 기획 / 데이터 분석 및 수집 / 트렌드 리서치<br>[![GitHub](https://img.shields.io/badge/GitHub-jiyoon-181717?logo=github)](https://github.com/Yuni-JiyoonPark) | **서누리**<br>BE · FE · UX · OCR<br>💻 백엔드 / 프론트 / UX / OCR<br>[![GitHub](https://img.shields.io/badge/GitHub-nuri-181717?logo=github)](https://github.com/NURI-S0320) |
 
 | 이름            | 역할 요약 |
 |-----------------|--------------------------------------------------------|
@@ -89,13 +89,40 @@
 - 전략적 업무 비중 증가 → 반복 작업 최소화
 
 ---
+사용자
+ └─ ① 문서 업로드 (Order / Invoice PDF, 이미지, 키워드)
+     ├─ [OCR] Google Vision API
+     │     └─ 구매서 / 인보이스에서 핵심 정보 추출 (날짜, 품목, 수량 등)
+     │
+     │
+     ├─ [벡터 임베딩]
+     │     └─ TF-IDF / Sentence Embedding
+     │         → Qdrant(벡터 저장) + MySQL(원문 저장)
+     │
+     ├─ [RAG 검색 & GPT-4o 요약]
+     │     └─ 유사 문서 검색 → GPT-4o-mini로 요약 생성 → 키워드 강조
+     │
+     └─ [대시보드 시각화]
+           ├─ 일정 추출 결과 캘린더 표시
+           ├─ 항목 불일치 자동 비교 표시
+           └─ 사용자 맞춤 우선순위 알림 제공
 
-## 🧭 시스템 아키텍처
 
-```plaintext
-유저
- └─ 업로드 (문서 / 키워드)
-     ├─ [OCR] Google Vision API → 핵심 항목 추출
-     ├─ [Embedding] 형태소 분석 + 벡터 저장 (Qdrant / MySQL)
-     └─ [검색 & 요약] RAG + GPT-4o-mini 기반 답변 생성
-           └─ 대시보드로 시각화 및 리포트 제공
+외부 수집기 (크롤러)
+ └─ ② 매거진 / 뉴스 데이터 수집
+     ├─ [크롤링] Selenium + BeautifulSoup
+     │     └─ Vogue / WWD / 무신사 / Google RSS 등에서 기사 수집
+     │
+     ├─ [본문 정제 + 전처리]
+     │     └─ HTML 제거, 이모지 제거, 줄바꿈 처리 등
+     │
+     ├─ [형태소 분석 및 키워드 추출]
+     │     └─ Kiwi 기반 명사 추출 및 토큰화
+     │
+     ├─ [DB 저장]
+     │     ├─ MySQL (title, content, upload_date, source 등)
+     │     └─ 형태소 결과도 `tokens` 컬럼 또는 별도 테이블에 저장
+     │
+     └─ [임베딩 및 분석]
+           ├─ TF-IDF / 네트워크 그래프 분석
+           └─ 문서 임베딩 후 Qdrant 저장 → 검색 & 대시보드 연계
