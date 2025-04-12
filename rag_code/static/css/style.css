@@ -1,0 +1,165 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 헤더 및 푸터 */
+header, footer {
+    padding: 1.5rem 0;
+}
+
+/* 탭 콘텐츠 영역 */
+.tab-pane {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0.25rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+/* 카드 영역 */
+.card {
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.card-body {
+    min-height: 200px;
+}
+
+/* 응답/레포트 영역 */
+#response-area, #report-area {
+    min-height: 150px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* 예시 질문 버튼 */
+.example-query {
+    margin-right: 5px;
+    margin-bottom: 5px;
+    white-space: normal;
+    text-align: left;
+}
+
+/* 데이터 소스 선택기 */
+.data-source-selector {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 0.25rem;
+    margin-bottom: 20px;
+}
+
+/* 마크다운 스타일링 */
+#report-area h1, #report-area h2, #response-area h1, #response-area h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+#report-area h3, #report-area h4, #response-area h3, #response-area h4 {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+#report-area p, #response-area p {
+    margin-bottom: 15px;
+}
+
+#report-area ul, #report-area ol, #response-area ul, #response-area ol {
+    margin-bottom: 15px;
+    padding-left: 25px;
+}
+
+#report-area li, #response-area li {
+    margin-bottom: 5px;
+}
+
+#report-area blockquote, #response-area blockquote {
+    border-left: 4px solid #e9ecef;
+    padding-left: 15px;
+    color: #6c757d;
+    margin: 15px 0;
+}
+
+#report-area code, #response-area code {
+    background-color: #f3f3f3;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-size: 0.875em;
+}
+
+#report-area pre, #response-area pre {
+    background-color: #f3f3f3;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
+#report-area table, #response-area table {
+    width: 100%;
+    margin-bottom: 15px;
+    border-collapse: collapse;
+}
+
+#report-area th, #report-area td, #response-area th, #response-area td {
+    border: 1px solid #dee2e6;
+    padding: 8px;
+}
+
+#report-area th, #response-area th {
+    background-color: #f8f9fa;
+    text-align: left;
+}
+
+/* 로딩 스타일 */
+#report-loading {
+    margin: 20px 0;
+}
+
+/* 탭 네비게이션 커스텀 스타일 */
+.nav-tabs .nav-link {
+    color: #495057;
+    font-weight: 500;
+}
+
+.nav-tabs .nav-link.active {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+/* 날짜 선택기 영역 */
+.row.mb-4 {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 0.25rem;
+    margin: 0 0 20px 0;
+}
+
+/* 반응형 조정 */
+@media (max-width: 768px) {
+    .example-queries .d-flex {
+        flex-direction: column;
+    }
+    
+    .example-query {
+        margin-bottom: 8px;
+        width: 100%;
+    }
+    
+    .data-source-selector {
+        padding: 10px;
+    }
+    
+    #response-area, #report-area {
+        min-height: 120px;
+    }
+}

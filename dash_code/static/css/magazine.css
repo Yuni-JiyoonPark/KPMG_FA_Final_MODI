@@ -1,0 +1,756 @@
+/* 매거진 페이지 스타일 */
+
+
+/* 분석 요약 섹션 스타일 */
+.analysis-summary {
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  padding: 12px 15px;
+  border-left: 3px solid #4a90e2;
+  margin-top: 15px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.analysis-summary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* 토글 가능한 요약 제목 스타일 */
+.summary-title.togglable {
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0; /* 활성화 되지 않은 경우 여백 제거 */
+  font-weight: 600;
+  color: #343a40;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  padding: 4px 0;
+}
+
+.summary-title.togglable:hover {
+  color: #4a90e2;
+}
+
+.summary-title.active {
+  margin-bottom: 10px; /* 활성화 된 경우 여백 추가 */
+}
+
+.toggle-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+  width: 20px;
+  height: 20px;
+}
+
+.toggle-icon i {
+  font-size: 0.8rem;
+}
+
+.summary-title.active .toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* 요약 컨텐츠 컨테이너 (기본적으로 닫힘) */
+.summary-content-container {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 0;
+}
+
+/* 활성화된 경우 내용 표시 */
+.summary-title.active + .summary-content-container {
+  max-height: 500px; /* 충분히 큰 값으로 설정 */
+  opacity: 1;
+  transition: max-height 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+.summary-content {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #495057;
+  margin-bottom: 0;
+}
+
+/* 글꼴 아이콘이 없는 경우 대체 표시 */
+.summary-title.togglable .toggle-icon:not(:has(i)) {
+  position: relative;
+}
+
+.summary-title.togglable .toggle-icon:not(:has(i))::after {
+  content: "▼";
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.summary-title.active .toggle-icon:not(:has(i))::after {
+  content: "▲";
+}
+
+/* 분석 요약 애니메이션 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.analysis-summary {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+/* 그리드 레이아웃 */
+.magazine-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* 그리드 아이템 공통 스타일 */
+.grid-item {
+  background: var(--card-bg-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 300px;
+}
+
+/* 매거진 선택 필터 */
+.magazine-filter {
+  background: var(--card-bg-color);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.filter-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.filter-tag {
+  background: var(--accent-color);
+  color: var(--text-color);
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filter-tag.active {
+  background: var(--primary-color);
+  color: white;
+}
+
+.filter-tag .remove {
+  margin-left: 6px;
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+/* 공통 키워드 가이드 */
+.common-keywords-guide {
+  background: transparent;
+  padding: 0 0 15px 0;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: none;
+}
+
+.common-keywords-guide h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.common-keywords-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.common-keyword-tag {
+  background: var(--primary-color);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 매거진별 키워드 그리드 */
+.magazine-keywords-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 12px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+/* 스크롤바 커스텀 스타일 */
+.magazine-keywords-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.magazine-keywords-grid::-webkit-scrollbar-track {
+  background: var(--background-color);
+  border-radius: 10px;
+}
+
+.magazine-keywords-grid::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 10px;
+}
+
+/* 매거진 칼럼 스타일 */
+.magazine-column {
+  border-radius: 8px;
+  padding: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 매거진 이름 표시 */
+.magazine-column h4 {
+  margin: 0 0 10px 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  font-size: 1rem;
+  color: white;
+  text-align: center;
+}
+
+/* 키워드 리스트 스타일 */
+.keyword-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* 키워드 아이템 스타일 */
+.keyword-item {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  padding: 3px 0;
+  color: white;
+}
+
+.keyword-rank {
+  width: 22px;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.keyword-text {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 매거진별 컬러 스타일 */
+.magazine-jentestore {
+  background: #36D6BE;  /* 연두색/민트색 */
+}
+
+.magazine-marieclaire {
+  background: #9C27B0;  /* 보라색 */
+}
+
+.magazine-vogue {
+  background: #FF5A5A;  /* 빨간색 */
+}
+
+.magazine-wkorea {
+  background: #4a90e2;  /* 파란색 */
+}
+
+.magazine-wwdkorea {
+  background: #FFA26B;  /* 주황색 */
+}
+
+/* 카드 그리드 레이아웃 개선 */
+.magazine-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 15px;
+}
+
+/* 카드 레이아웃 개선 */
+.magazine-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.magazine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+/* 카드뉴스 이미지 스타일 수정 */
+.magazine-card-image-container {
+  width: 100%;
+  height: 200px; /* 적절한 높이로 조정 */
+  overflow: hidden;
+  border-radius: 8px 8px 0 0;
+}
+
+.magazine-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 이미지 비율 유지하면서 컨테이너에 맞춤 */
+  transition: transform 0.3s ease;
+}
+
+.magazine-card:hover .magazine-card-image {
+  transform: scale(1.05); /* 호버 시 이미지 확대 효과 */
+} 
+
+.magazine-card-content {
+  padding: 15px;
+}
+
+.magazine-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: var(--text-color);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.4;
+  max-height: 2.8em;
+}
+
+.magazine-card-date, .magazine-card-source {
+  font-size: 0.8rem;
+  color: var(--secondary-text);
+  margin: 5px 0;
+}
+
+.magazine-card-link {
+  margin-top: auto;
+  padding: 6px 12px;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  display: inline-block;
+}
+
+.magazine-card-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* 필터 버튼 스타일 개선 */
+.magazine-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.magazine-filter-btn {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.magazine-filter-btn.active {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 1200px) {
+  .magazine-grid-3col {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .magazine-grid-3col {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+  }
+  
+  .magazine-keywords-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .magazine-card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .magazine-keywords-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .magazine-card-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.filtering-info {
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 10px;
+}
+
+.no-data {
+  background-color: var(--card-bg-color);
+  color: var(--secondary-text);
+  border: 1px dashed var(--border-color);
+  padding: 30px;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* 키워드 하이라이트 스타일 */
+.keyword-item.highlighted, .common-keyword-tag.highlighted {
+  background-color: var(--primary-color);
+  box-shadow: 0 2px 8px rgba(var(--primary-color-rgb), 0.4);
+  transform: translateY(-2px);
+}
+
+.keyword-item.highlighted {
+  padding-left: 5px;
+  border-left: 3px solid white;
+}
+
+.common-keyword-tag.highlighted {
+  transform: scale(1.05);
+}
+
+/* 카테고리 선택기 스타일 */
+.category-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+  background-color: var(--accent-color);
+  padding: 12px 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.radio-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.category-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-right: 5px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: transform 0.2s;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.radio-label:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  transform: translateY(-1px);
+}
+
+.radio-label input[type="radio"] {
+  display: none;
+}
+
+.radio-custom {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--primary-color);
+  border-radius: 50%;
+  margin-right: 5px;
+  position: relative;
+}
+
+.radio-custom::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.2s;
+}
+
+.radio-label input[type="radio"]:checked + .radio-custom::after {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.radio-label input[type="radio"]:checked ~ span:not(.radio-custom) {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.period-display {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  background: rgba(255, 255, 255, 0.6);
+  padding: 4px 10px;
+  border-radius: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* 그래프 컨테이너 스타일 */
+.chart-container {
+  width: 100%;
+  min-height: 230px;
+  margin-bottom: 15px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  position: relative;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+}
+
+.no-data, .error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  min-height: 150px;
+  color: var(--secondary-text);
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+}
+
+.error {
+  color: #ff5a5a;
+}
+
+.chart-info {
+  margin-top: 5px;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  font-size: 0.8rem;
+  color: var(--secondary-text);
+  line-height: 1.4;
+}
+
+.chart-info p {
+  margin: 5px 0;
+} 
+
+/* magazine.css에 추가할 스타일 */
+
+/* 섹션 높이 통일 */
+.dashboard-grid .grid-item {
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* 그리드 아이템 기본 패딩 및 마진 설정 */
+.grid-item h3 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+/* 시각화 컨테이너 설정 */
+.visualization-container {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 키워드 시각화 컨테이너 특별 스타일 */
+.keyword-visualization {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 스크롤 가능한 차트 컨테이너 */
+.charts-scrollable-container {
+  flex: 1;
+  overflow-y: auto;
+  padding-right: 5px;
+  scrollbar-width: thin;
+}
+
+.charts-scrollable-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.charts-scrollable-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.charts-scrollable-container::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.charts-scrollable-container::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* 키워드 차트 컨테이너 */
+.keyword-charts-container {
+  padding: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.keyword-charts-container h4 {
+  font-size: 16px;
+  margin: 10px 0;
+  color: #333;
+  text-align: center;
+}
+
+/* 키워드 탭 스타일 */
+.keyword-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+  padding: 0 10px;
+}
+
+.keyword-tab {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background: #f5f5f5;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 14px;
+  outline: none;
+}
+
+.keyword-tab:hover {
+  background: #e9f2ff;
+  border-color: #4a90e2;
+}
+
+.keyword-tab.active {
+  background: #4a90e2;
+  color: white;
+  border-color: #4a90e2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 스크롤 가능한 컨테이너 */
+.charts-scrollable-container {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden; /* 수평 스크롤 방지 */
+  padding-right: 5px;
+  scrollbar-width: thin;
+}
+
+/* Plotly 차트 스타일 조정 */
+.js-plotly-plot {
+  margin: 0 auto; /* 중앙 정렬 */
+}
+
+/* Plotly SVG 스타일 조정 */
+.js-plotly-plot .main-svg {
+  max-width: 100%; /* 최대 너비 제한 */
+}
+
+/* 파이차트 내부 텍스트 강조 */
+.pie-chart-container text {
+  font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif !important;
+  font-weight: 500 !important;
+}
+
+/* 레전드(Legend) 크기 조정 */
+.pie-chart-container .legend text {
+  font-size: 12px !important;
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+  .pie-chart-container {
+      min-height: 300px; /* 모바일에서 높이 줄임 */
+  }
+}
+  
+.pie-chart-container {
+      min-height: 400px; /* 큰 화면에서는 더 큰 파이차트 */
+  }
+
+/* 모바일 화면에서도 크기 조정 */
+@media (max-width: 768px) {
+  .pie-chart-container {
+      min-height: 300px; /* 모바일에서는 약간 작게 */
+  }
+}
