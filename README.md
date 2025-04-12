@@ -13,7 +13,7 @@ final_card_readme = """
 
 ## 👥 Team Members
 
-| <img src="https://chat.openai.com/mnt/data/jh.png" width="130"/> | <img src="https://chat.openai.com/mnt/data/yj.png" width="130"/> | <img src="https://chat.openai.com/mnt/data/jy.png" width="130"/> | <img src="https://chat.openai.com/mnt/data/nr.png" width="130"/> |
+| <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/jh.png" width="130"/> | <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/yj.png" width="130"/> | <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/jy.png" width="130"/> | <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/nr.png" width="130"/> |
 |:--:|:--:|:--:|:--:|
 | **박정훈**<br>PL · DBA · FE<br>🧠 시스템 통합 / DB / 프론트 일부<br>[![GitHub](https://img.shields.io/badge/GitHub-junghoon-181717?logo=github)](https://github.com/junghoon) | **지연주**<br>PM · DA · TR<br>📋 기획 / 데이터 분석 및 수집 / 트렌드 리서치<br>[![GitHub](https://img.shields.io/badge/GitHub-yeonju-181717?logo=github)](https://github.com/yeonju) | **박지윤**<br>PM · DA · TR<br>📊 기획 / 데이터 분석 및 수집 / 트렌드 리서치<br>[![GitHub](https://img.shields.io/badge/GitHub-jiyoon-181717?logo=github)](https://github.com/jiyoon) | **서누리**<br>BE · FE · UX · OCR<br>💻 백엔드 / 프론트 / UX / OCR<br>[![GitHub](https://img.shields.io/badge/GitHub-nuri-181717?logo=github)](https://github.com/nuri) |
 
