@@ -12,7 +12,7 @@
 
 | [<img src="https://avatars.githubusercontent.com/u/00000001?v=4" width="130"/>](#) | [<img src="https://avatars.githubusercontent.com/u/00000002?v=4" width="130"/>](#) | [<img src="https://avatars.githubusercontent.com/u/00000003?v=4" width="130"/>](#) | [<img src="https://avatars.githubusercontent.com/u/00000004?v=4" width="130"/>](#) |
 | :--: | :--: | :--: | :--: |
-| **박정훈**<br>`PL · DBA · FE`<br>🧠 시스템 통합 / DB / 프론트 일부 | **지연주**<br>`PM · DS · TR`<br>📋 기획 / 데이터 분석 / 트렌드 리서치 | **박지윤**<br>`PM · DS · TR`<br>📊 기획 보조 / 분석 / 트렌드 리서치 | **서누리**<br>`BE · FE · UX · OCR`<br>💻 백엔드 / 프론트 / UX / OCR |
+| **박정훈**<br>`PL · DBA · FE`<br>🧠 시스템 통합 / DB설계 / 프론트 / 임베딩 | **지연주**<br>`PM · DS · TR`<br>📋 기획 / 데이터 분석 / 트렌드 리서치 | **박지윤**<br>`PM · DS · TR`<br>📊 기획  / 데이터 분석 / 트렌드 리서치 | **서누리**<br>`BE · FE · UX · OCR`<br>💻 백엔드 / 프론트 / UX / OCR |
 | [![GitHub](https://img.shields.io/badge/GitHub-Link-181717?logo=github)](https://github.com/junghoon) | [![GitHub](https://img.shields.io/badge/GitHub-Link-181717?logo=github)](https://github.com/yeonju) | [![GitHub](https://img.shields.io/badge/GitHub-Link-181717?logo=github)](https://github.com/jiyoon) | [![GitHub](https://img.shields.io/badge/GitHub-Link-181717?logo=github)](https://github.com/nuri) |
 
 ---
