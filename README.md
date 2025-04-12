@@ -12,14 +12,14 @@
 
 | [<img src="https://avatars.githubusercontent.com/u/00000001?v=4" width="130"/>](#) | [<img src="https://avatars.githubusercontent.com/u/00000002?v=4" width="130"/>](#) | [<img src="https://avatars.githubusercontent.com/u/00000003?v=4" width="130"/>](#) | [<img src="https://avatars.githubusercontent.com/u/00000004?v=4" width="130"/>](#) |
 | :--: | :--: | :--: | :--: |
-| **박정훈**<br>PL · DBA · FE<br>🧠 시스템 통합 / DB / 프론트 일부 | **지연주**<br>PM · DS · TR<br>📋 기획 / 데이터 분석 / 트렌드 리서치 | **박지윤**<br>PM · DS · TR<br>📊 기획 보조 / 분석 / 트렌드 리서치 | **서누리**<br>BE · FE · UX · OCR<br>💻 백엔드 / 프론트 / UX / OCR |
+| **박정훈**<br>PL · DBA · FE<br>🧠 시스템 통합 / DB / 프론트 일부 | **지연주**<br>PM · DA · TR<br>📋 기획 / 데이터 분석 및 수집/ 트렌드 리서치 | **박지윤**<br>PM · DA · TR<br>📊 기획 / 데이터 분석 및 수집 / 트렌드 리서치 | **서누리**<br>BE · FE · UX · OCR<br>💻 백엔드 / 프론트 / UX / OCR |
 | [![GitHub](https://img.shields.io/badge/GitHub-Link-181717?logo=github)](https://github.com/junghoon) | [![GitHub](https://img.shields.io/badge/GitHub-Link-181717?logo=github)](https://github.com/yeonju) | [![GitHub](https://img.shields.io/badge/GitHub-Link-181717?logo=github)](https://github.com/jiyoon) | [![GitHub](https://img.shields.io/badge/GitHub-Link-181717?logo=github)](https://github.com/nuri) |
 
 | 이름            | 역할 요약 |
 |-----------------|--------------------------------------------------------|
-| **박정훈** (PL, DBA, FE)       | 🧠 Team Lead, DB 설계 및 관리, 프론트 일부 구현, 시스템 통합 |
-| **지연주** (PM, DS, TR)        | 📋 프로젝트 총괄 기획, 데이터 분석, 트렌드 리서치,  |
-| **박지윤** (PM, DS, TR)        | 📊 프로젝트 기획 및 데이터 분석 , 데이터 전처리, 트렌드 분석 |
+| **박정훈** (PL, DBA, FE)       | 🧠 Team Lead, DB 설계 및 관리, 프론트 일부 구현, 시스템 통합, Vector DB 설계 |
+| **지연주** (PM, DS, TR)        | 📋 프로젝트 총괄 기획, 데이터 분석 및 수집, 트렌드 리서치,  |
+| **박지윤** (PM, DS, TR)        | 📊 프로젝트 기획 및 데이터 분석 및 수집 , 데이터 전처리, 트렌드 분석 |
 | **서누리** (BE, FE, UX, OCR)  | 💻 백엔드 개발, 프론트 구현, UX 설계 및 화면 구성, OCR 개발 |
 
 ### 🗂 역할 약어 설명
@@ -30,7 +30,7 @@
 | PM   | Project Manager            |
 | FE   | Frontend Engineer          |
 | BE   | Backend Engineer           |
-| DS   | Data Scientist             |
+| DA   | Data Analyst               |
 | DBA  | Database Administrator     |
 | UX   | User Experience Designer   |
 | TR   | Trend Analyst              |
