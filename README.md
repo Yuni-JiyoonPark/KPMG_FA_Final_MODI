@@ -18,16 +18,16 @@
 |:--:|:--:|:--:|:--:|
 | **박정훈**<br>PL · DBA · FE<br>🧠 시스템 통합 / DB / 프론트 일부<br>[![GitHub](https://img.shields.io/badge/GitHub-junghoon-181717?logo=github)](https://github.com/ezypzylemon) | **지연주**<br>PM · DA · TR<br>📋 기획 / 데이터 분석 및 수집 / 트렌드 리서치<br>[![GitHub](https://img.shields.io/badge/GitHub-yeonju-181717?logo=github)](https://github.com/y47love) | **박지윤**<br>PM · DA · TR<br>📊 기획 / 데이터 분석 및 수집 / 트렌드 리서치<br>[![GitHub](https://img.shields.io/badge/GitHub-jiyoon-181717?logo=github)](https://github.com/Yuni-JiyoonPark) | **서누리**<br>BE · FE · UX · OCR<br>💻 백엔드 / 프론트 / UX / OCR<br>[![GitHub](https://img.shields.io/badge/GitHub-nuri-181717?logo=github)](https://github.com/NURI-S0320) |
 
-| 이름            | 역할 요약 |
+| 이름             | 역할 요약 |
 |-----------------|--------------------------------------------------------|
 | **박정훈** (PL, DBA, FE)       | 🧠 Team Lead, DB 설계 및 관리, 프론트 일부 구현, 시스템 통합, Vector DB 설계 |
-| **지연주** (PM, DA, TA)        | 📋 프로젝트 총괄 기획, 데이터 분석 및 수집, 트렌드 분석, 프롬프트 엔지니어링, 텍스트 마이닝 |
-| **박지윤** (PM, DA, TA)        | 📊 프로젝트 기획 및 데이터 분석 및 수집, 데이터 전처리, 트렌드 분석, 텍스트 마이닝 |
-| **서누리** (BE, FE, UX, OCR)  | 💻 백엔드 개발, 프론트 구현, UX 설계 및 화면 구성, OCR 개발 |
+| **지연주** (PM, DA, TA, UX)    | 📋 프로젝트 기획 및 아이데이션 리드, 데이터 분석 및 전처리, 프롬프트 엔지니어링, 사용자 경험 설계(UX) |
+| **박지윤** (PM, DA, TA, UX)    | 📊 프로젝트 기획, 데이터 분석 및 수집, 데이터 전처리, 텍스트 정성 분석, 사용자 경험 설계(UX), RAG |
+| **서누리** (BE, FE, UI, OCR)   | 💻 백엔드 개발, 프론트 구현, UI 화면 구성, OCR 개발 |
 
 ### 🗂 역할 약어 설명
 
-| 약어 | 설명                       |
+| 약어 | 설명                        |
 |------|----------------------------|
 | PL   | Project Leader             |
 | PM   | Project Manager            |
