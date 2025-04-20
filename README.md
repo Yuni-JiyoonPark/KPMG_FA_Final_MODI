@@ -16,14 +16,14 @@
 
 | <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/jh.png" width="130"/> | <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/jy.png" width="130"/> | <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/nr.png" width="130"/> | <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/yj.png" width="130"/> |
 |:--:|:--:|:--:|:--:|
-| **박정훈**<br>PL · DBA · FE<br>🧠 시스템 통합 / DB / 프론트 일부<br>[![GitHub](https://img.shields.io/badge/GitHub-junghoon-181717?logo=github)](https://github.com/ezypzylemon) | **박지윤**<br>PM · DA · UX<br>📊 기획 / 데이터 분석 및 수집 / 사용자 경험 설계<br>[![GitHub](https://img.shields.io/badge/GitHub-jiyoon-181717?logo=github)](https://github.com/Yuni-JiyoonPark) | **서누리**<br>BE · FE · UI · OCR<br>💻 백엔드 / 프론트 / UI / OCR<br>[![GitHub](https://img.shields.io/badge/GitHub-nuri-181717?logo=github)](https://github.com/NURI-S0320) | **지연주**<br>PM · DA · UX<br>📋 기획 / 데이터 분석 및 수집 / 사용자 경험 설계<br>[![GitHub](https://img.shields.io/badge/GitHub-yeonju-181717?logo=github)](https://github.com/y47love) |
+| **박정훈**<br>PL · DBA · FE<br>🧠 시스템 통합 / DB / 프론트 일부<br>[![GitHub](https://img.shields.io/badge/GitHub-junghoon-181717?logo=github)](https://github.com/ezypzylemon) | **박지윤**<br>PM · DA · UX<br>📊 기획 / 데이터 수집 및 분석 / 사용자 경험 설계<br>[![GitHub](https://img.shields.io/badge/GitHub-jiyoon-181717?logo=github)](https://github.com/Yuni-JiyoonPark) | **서누리**<br>BE · FE · UI · OCR<br>💻 백엔드 / 프론트 / UI / OCR<br>[![GitHub](https://img.shields.io/badge/GitHub-nuri-181717?logo=github)](https://github.com/NURI-S0320) | **지연주**<br>PM · DA · UX<br>📋 기획 / 데이터 수집 및 분석 / 사용자 경험 설계<br>[![GitHub](https://img.shields.io/badge/GitHub-yeonju-181717?logo=github)](https://github.com/y47love) |
 
 | 이름             | 역할 요약 |
 |-----------------|--------------------------------------------------------|
 | **박정훈** (PL, DBA, FE)       | 🧠 Team Lead, DB 설계 및 관리, 프론트 일부 구현, 시스템 통합, Vector DB 설계 |
-| **박지윤** (PM, DA, UX)    | 📊 프로젝트 기획, 데이터 분석 및 수집, 데이터 전처리, RAG 및 시각화 기능 구현, 텍스트 정성 분석, 대시보드 구성(UX) |
+| **박지윤** (PM, DA, UX)    | 📊 프로젝트 기획, 데이터 수집 및 분석, 데이터 전처리, RAG 및 시각화 기능 구현, 텍스트 정성 분석, 대시보드 구성(UX) |
 | **서누리** (BE, FE, UI, OCR)   | 💻 백엔드 개발, 프론트 구현, UI 화면 구성, OCR 개발 |
-| **지연주** (PM, DA, UX)    | 📋 프로젝트 기획 및 아이디어 발안, 데이터 분석 및 수집, 데이터 전처리, 프롬프트 엔지니어링, 대시보드 구성(UX) |
+| **지연주** (PM, DA, UX)    | 📋 프로젝트 기획 및 아이디어 발안, 데이터 수집 및 분석, 데이터 전처리, 프롬프트 엔지니어링, 대시보드 구성(UX) |
 
 ### 🗂 역할 약어 설명
 
