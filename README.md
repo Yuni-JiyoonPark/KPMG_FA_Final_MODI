@@ -1,5 +1,5 @@
 # PROJECT MODI
-> 패션 MD 업무 효율화를 위한 AI 기반 실무형 솔루션
+> 패션 MD 업무 효율화를 위한 AI 기반 실무형 솔루션ㅇㅇㅇㅇㅇ
 
 <p align="center">
   <img src="https://github.com/KpmgFuture-Academy/fa02_fin_MODI/blob/main/img/modi_logo.png" width="300"/>
